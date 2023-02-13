@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-k8ao
+  namespace: sbudhwar-1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: env
+          value: development
+        image: quay.io/redhat-appstudio/user-workload@sha256:231768139a3601085f3c10d7d51932da9ee3632f9fb764ad1fe66eb25079ad8e
+        name: my-nodejs
+        resources: {}
+status: {}
